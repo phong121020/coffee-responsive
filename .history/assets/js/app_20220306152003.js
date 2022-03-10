@@ -1,0 +1,23 @@
+// SHOW MENU
+const navToggle = document.querySelector(".nav__toggle");
+const navMenu = document.querySelector(".nav__menu");
+const navClose = document.querySelector(".nav__close");
+const navItem = document.querySelectorAll(".nav__item");
+// MENU SHOW
+if (navToggle) {
+  navToggle.addEventListener("click", function () {
+    navMenu.classList.add("is-show");
+  });
+}
+//  MENU HIDDEN
+if (navClose) {
+  navClose.addEventListener("click", function () {
+    navMenu.classList.remove("is-show");
+  });
+}
+// REMOVE MENU MOBILE
+[...navItem].forEach((item) =>
+  item.addEventListener("click", function () {
+    console.log(hi);
+  })
+);
