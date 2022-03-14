@@ -70,6 +70,12 @@ function showScrollUp() {
 }
 window.addEventListener("scroll", showScrollUp);
 
+// RETURN HOME
+// function returnHome() {
+//   scrollUp.setAttribute("href", "#home");
+// }
+// scrollUp.addEventListener("click", returnHome);
+
 // SCROLL SECTIONS ACTIVE LINK
 const sections = document.querySelectorAll("section[id");
 
@@ -93,28 +99,3 @@ function scrollActive() {
   });
 }
 window.addEventListener("scroll", scrollActive);
-
-// CHANGE TITLE
-const homeTitle = document.querySelector(".home__title");
-const homeText = homeTitle.textContent.trim();
-const homeSplit = homeText.split("");
-console.log(homeSplit);
-homeTitle.textContent = "";
-for (let i = 0; i < homeSplit.length; i++) {
-  homeTitle.innerHTML += "<span>" + homeSplit[i] + "</span>";
-}
-let char = 0;
-let timer = setInterval(onTick, 100);
-function onTick() {
-  const span = homeTitle.querySelectorAll("span")[char];
-  span.classList.add("fade");
-  char++;
-  if (char === homeSplit.length) {
-    complete();
-    return;
-  }
-}
-function complete() {
-  clearInterval(timer);
-  timer = null;
-}

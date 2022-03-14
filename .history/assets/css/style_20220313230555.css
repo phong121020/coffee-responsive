@@ -233,11 +233,6 @@ button {
 }
 .home__title span {
   color: var(--first-color);
-  opacity: 0;
-  transition: all 6s ease;
-}
-.home__title span.fade {
-  opacity: 1;
 }
 .home__desc {
   margin-bottom: 2rem;

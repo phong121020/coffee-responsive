@@ -104,17 +104,4 @@ for (let i = 0; i < homeSplit.length; i++) {
   homeTitle.innerHTML += "<span>" + homeSplit[i] + "</span>";
 }
 let char = 0;
-let timer = setInterval(onTick, 100);
-function onTick() {
-  const span = homeTitle.querySelectorAll("span")[char];
-  span.classList.add("fade");
-  char++;
-  if (char === homeSplit.length) {
-    complete();
-    return;
-  }
-}
-function complete() {
-  clearInterval(timer);
-  timer = null;
-}
+let timer = setInterval(onTick, 50);
